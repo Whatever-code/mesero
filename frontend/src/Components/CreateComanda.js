@@ -6,7 +6,7 @@ export default class CreateComanda extends Component {
     //Con un formulario agrego el pedio a la lista y que la lista 
     //           contenga un boton submit para enviar todo los pedidos como un array
 
-    URL = config.BACKEND + '/comanda'
+    URL = config.BACKEND + '/comanda';
     URL_INI = config.BACKEND + '/comanda/add';
 
     state = {
