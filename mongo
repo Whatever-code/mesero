@@ -1,0 +1,16 @@
+Instalar nodejs
+
+Instalar mongodb
+
+descargar archivos desde github
+
+cambiar archivo de configuracion
+
+dentro del proyecto, donde se encuentra el package.json npm install para que instale las dependencias
+
+ejecutar ambos servidores
+
+importar db a mongo
+    (me ubico en el directorio donde esta la carpeta dump mongorestore --db meseros dump/meseros)
+
+listo?
