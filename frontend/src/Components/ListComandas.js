@@ -35,17 +35,21 @@ export default class ListComandas extends Component {
                     {this.state.comandas.map(comanda =>
                         <div className="col-sm-12">
                             <div className="card">
-                                <div className="card-header">Mesa: {comanda.mesa}</div>
+                                <div className="card-header">
+                                    <div className="row justify-content-between">
+                                        <h4>Mesa: {comanda.mesa}</h4>
+                                        <button className="btn btn-success" onClick={() => this.delete(comanda._id)}>Lista</button>
+                                    </div>
+                                </div>
                                 <div className="card-body">
                                     <ul>
                                         {comanda.pedidos.map(pedido =>
-                                            <li><span>{pedido.nombre}: {pedido.cantidad}</span></li>
+                                            <li><span>{pedido.tipo} {pedido.nombre}: {pedido.cantidad}</span></li>
                                         )}
                                     </ul>
-
                                 </div>
                                 <div className="card-footer">
-                                    <button className="btn btn-success btn-block" onClick={() => this.delete(comanda._id)}>Lista</button>
+                                    <h5 className="float-right">Total: {comanda.total}</h5>
                                 </div>
                             </div>
                             <hr className="my-4"></hr>

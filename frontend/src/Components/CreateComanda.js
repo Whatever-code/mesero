@@ -62,28 +62,36 @@ export default class CreateComanda extends Component {
     }
 
     onSubmit = () => {
-        var pedidosProv = this.state.pedidos;
+        if (this.state.cantidad === '') {
+            var pedidosProv = this.state.pedidos;
 
-        pedidosProv.push({
-            tipo: this.state.tipo,
-            nombre: this.state.nombre,
-            cantidad: this.state.cantidad,
-            detalle: this.state.detalle
-        });
+            pedidosProv.push({
+                tipo: this.state.tipo,
+                nombre: this.state.nombre,
+                cantidad: this.state.cantidad,
+                detalle: this.state.detalle
+            });
 
-        this.setState({
-            pedidos: pedidosProv
-        })
+            this.setState({
+                pedidos: pedidosProv
+            })
 
-        this.clearForm();
+            this.clearForm();
+        }else{
+            alert('Debe completar todos los campos.');
+        }
     }
 
     finish = async () => {
 
-        await Axios.post(this.URL, {
-            mesa: this.state.mesa,
-            pedidos: this.state.pedidos
-        });
+        if (this.state.mesa === '') {
+            await Axios.post(this.URL, {
+                mesa: this.state.mesa,
+                pedidos: this.state.pedidos
+            });
+        }else{
+            alert('Ingrese un numero de mesa.');
+        }
 
         window.location.href = '/comanda';
     }
