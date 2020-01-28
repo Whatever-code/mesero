@@ -1,9 +1,0 @@
-#tablaPlato{
-    max-height: 500px !important;
-    overflow-y: auto;
-}
-
-#tablaPedido{
-    max-height: 500px !important;
-    overflow-y: auto;
-}
