@@ -1,3 +1,3 @@
 module.exports = {
-    BACKEND: "http://192.168.1.95:4000/api"
+    BACKEND: "http://localhost:4000/api"
 }

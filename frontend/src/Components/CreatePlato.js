@@ -39,16 +39,20 @@ export default class CreatePlato extends Component {
     onSubmit = async (e) => {
         e.preventDefault();
 
-        const res = await Axios.post(this.URL, {
-            nombre: this.state.nombre,
-            precio: this.state.precio,
-            tipo: this.state.tipo
-        });
-
-        alert(res.data);
-        
-        this.clearForm();
-        this.getPlatos();
+        if (this.state.nombre === '' || this.state.precio === '' || this.state.tipo === '') {
+            alert('Debe de completar todos los campos');
+        }else{
+            const res = await Axios.post(this.URL, {
+                nombre: this.state.nombre,
+                precio: this.state.precio,
+                tipo: this.state.tipo
+            });
+    
+            alert(res.data);
+            
+            this.clearForm();
+            this.getPlatos();
+        }
     }
 
     delete = async (id) => {

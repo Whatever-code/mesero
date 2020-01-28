@@ -63,6 +63,8 @@ export default class CreateComanda extends Component {
 
     onSubmit = () => {
         if (this.state.cantidad === '') {
+            alert('Debe completar todos los campos.');
+        }else{
             var pedidosProv = this.state.pedidos;
 
             pedidosProv.push({
@@ -77,9 +79,15 @@ export default class CreateComanda extends Component {
             })
 
             this.clearForm();
-        }else{
-            alert('Debe completar todos los campos.');
         }
+    }
+
+    delete = async (nombre) => {
+        var pedidosProv = this.state.pedidos.filter(pedido => pedido.nombre != nombre);
+
+        this.setState({
+            pedidos: pedidosProv
+        })
     }
 
     finish = async () => {
@@ -177,8 +185,7 @@ export default class CreateComanda extends Component {
                                             <td>{pedido.nombre}</td>
                                             <td>{pedido.cantidad}</td>
                                             <td>
-                                                <button className="btn btn-danger">E</button>
-                                                <button className="btn btn-warning ml-1">M</button>
+                                                <button className="btn btn-danger" onClick={() => this.edit(plato.nombre)}>E</button>
                                             </td>
                                         </tr>
                                     )}
