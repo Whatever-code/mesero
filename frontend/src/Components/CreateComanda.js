@@ -83,7 +83,7 @@ export default class CreateComanda extends Component {
     }
 
     delete = async (nombre) => {
-        var pedidosProv = this.state.pedidos.filter(pedido => pedido.nombre != nombre);
+        var pedidosProv = this.state.pedidos.filter(pedido => pedido.nombre !== nombre);
 
         this.setState({
             pedidos: pedidosProv
