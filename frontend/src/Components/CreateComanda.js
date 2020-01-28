@@ -185,7 +185,7 @@ export default class CreateComanda extends Component {
                                             <td>{pedido.nombre}</td>
                                             <td>{pedido.cantidad}</td>
                                             <td>
-                                                <button className="btn btn-danger" onClick={() => this.edit(plato.nombre)}>E</button>
+                                                <button className="btn btn-danger" onClick={() => this.edit(pedido.nombre)}>E</button>
                                             </td>
                                         </tr>
                                     )}
