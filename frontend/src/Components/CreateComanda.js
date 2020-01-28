@@ -64,7 +64,7 @@ export default class CreateComanda extends Component {
     onSubmit = () => {
         if (this.state.cantidad === '') {
             alert('Debe completar todos los campos.');
-        }else{
+        } else {
             var pedidosProv = this.state.pedidos;
 
             pedidosProv.push({
@@ -93,12 +93,13 @@ export default class CreateComanda extends Component {
     finish = async () => {
 
         if (this.state.mesa === '') {
+            alert('Ingrese un numero de mesa.');
+        } else {
+
             await Axios.post(this.URL, {
                 mesa: this.state.mesa,
                 pedidos: this.state.pedidos
             });
-        }else{
-            alert('Ingrese un numero de mesa.');
         }
 
         window.location.href = '/comanda';
