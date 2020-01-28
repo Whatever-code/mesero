@@ -44,7 +44,9 @@ export default class ListComandas extends Component {
                                 <div className="card-body">
                                     <ul>
                                         {comanda.pedidos.map(pedido =>
-                                            <li><span>{pedido.tipo} {pedido.nombre}: {pedido.cantidad}</span></li>
+                                            <li><span>{pedido.tipo} {pedido.nombre}: {pedido.cantidad} <br />
+                                                <span id="com-detalle">{pedido.detalle}</span>
+                                            </span></li>
                                         )}
                                     </ul>
                                 </div>

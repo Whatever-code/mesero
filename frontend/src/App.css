@@ -1,0 +1,15 @@
+#com-detalle{
+    font-size: 15px;
+    color: gray;
+    margin-left: 30px;
+}
+
+#tablaPedido{
+    max-Height: 600px;
+    overflow-y: auto;
+}
+
+#tablaPlato{
+    max-Height: 400px;
+    overflow-y: auto;
+}
