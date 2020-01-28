@@ -17,7 +17,6 @@ export default class CreatePlato extends Component {
         this.setState({
             nombre: '',
             precio: '',
-            tipo: '',
         })
     }
 
