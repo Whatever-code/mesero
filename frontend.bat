@@ -1,2 +1,2 @@
-cd c:/Program Files/meseros/frontend
+cd c:/Program Files/mesero/frontend
 npm start
